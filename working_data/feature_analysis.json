@@ -1,0 +1,82 @@
+{
+    "ФИО": {
+        "type": "categorical_or_text",
+        "n_unique": 281,
+        "n_total": 1000,
+        "missing_pct": 0.0,
+        "is_informative": true,
+        "reason": "категориальная с повторяющимися значениями"
+    },
+    "Паспортные данные": {
+        "type": "categorical_or_text",
+        "n_unique": 281,
+        "n_total": 1000,
+        "missing_pct": 0.0,
+        "is_informative": true,
+        "reason": "категориальная с повторяющимися значениями"
+    },
+    "СНИЛС": {
+        "type": "categorical_or_text",
+        "n_unique": 281,
+        "n_total": 1000,
+        "missing_pct": 0.0,
+        "is_informative": true,
+        "reason": "категориальная с повторяющимися значениями"
+    },
+    "Симптомы": {
+        "type": "categorical_or_text",
+        "n_unique": 553,
+        "n_total": 1000,
+        "missing_pct": 0.0,
+        "is_informative": true,
+        "reason": "мультилейбл с вариацией"
+    },
+    "Выбор врача": {
+        "type": "categorical_or_text",
+        "n_unique": 54,
+        "n_total": 1000,
+        "missing_pct": 0.0,
+        "is_informative": true,
+        "reason": "категориальная с повторяющимися значениями"
+    },
+    "Дата посещения врача": {
+        "type": "categorical_or_text",
+        "n_unique": 518,
+        "n_total": 1000,
+        "missing_pct": 0.0,
+        "is_informative": true,
+        "reason": "категориальная с повторяющимися значениями"
+    },
+    "Анализы": {
+        "type": "categorical_or_text",
+        "n_unique": 317,
+        "n_total": 1000,
+        "missing_pct": 0.0,
+        "is_informative": true,
+        "reason": "мультилейбл с вариацией"
+    },
+    "Дата получения анализов": {
+        "type": "categorical_or_text",
+        "n_unique": 303,
+        "n_total": 1000,
+        "missing_pct": 0.0,
+        "is_informative": true,
+        "reason": "категориальная с повторяющимися значениями"
+    },
+    "Стоимость анализов": {
+        "type": "categorical_or_text",
+        "n_unique": 56,
+        "n_total": 1000,
+        "missing_pct": 0.0,
+        "is_informative": true,
+        "reason": "категориальная с повторяющимися значениями"
+    },
+    "Карта оплаты": {
+        "type": "categorical_or_text",
+        "n_unique": 587,
+        "n_total": 1000,
+        "missing_pct": 0.0,
+        "is_informative": true,
+        "reason": "категориальная с повторяющимися значениями"
+    }
+}
