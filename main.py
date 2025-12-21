@@ -10,6 +10,7 @@ from correlations_all import main as run_correlations
 from encode_full_dataset import main as encode_dataset
 from fill_missing import fill_all_datasets
 from calculate_errors import calculate_errors_for_all  # ← НОВЫЙ ИМПОРТ
+from isodata import run_isodata_4vars
 
 
 def save_stats_for_missing_datasets():
@@ -67,6 +68,7 @@ def main():
     Этап 5: Заполнение пропусков двумя методами
     Этап 6: Статистика по восстановленным данным
     Этап 7: Расчёт погрешностей восстановления
+    Этап 8: Кластеризация ISODATA на оригинальном датасете
     """
 
     # === Пути ===
@@ -148,6 +150,11 @@ def main():
     calculate_errors_for_all()
     print("Погрешности сохранены в: working_data/error_analysis/error_summary.csv")
 
+    # === ШАГ 10: КЛАСТЕРИЗАЦИЯ ISODATA НА ОРИГИНАЛЬНОМ ОЦИФРОВАННОМ ДАТАСЕТЕ ===
+    print("\n=== Шаг 10: Кластеризация ISODATA на оригинальном оцифрованном датасете ===")
+    run_isodata_4vars('working_data/encoded_full.csv')
+    print("Кластеризованный датасет сохранён: clustered_datasets/isodata_clustered.csv")
+
     print("\n" + "="*60)
     print(" ВСЕ ЭТАПЫ ВЫПОЛНЕНЫ.")
     print("\nСоздано:")
@@ -156,10 +163,12 @@ def main():
     print("- Версии с пропусками + статистики")
     print("- Версии с заполненными пропусками + статистики")
     print("- Файл погрешностей: error_summary.csv")
+    print("- Кластеризованный датасет: isodata_clustered.csv")
     print("\nТеперь можно:")
-    print("• Оценивать смещение от пропусков")
-    print("• Сравнивать методы заполнения")
-    print("• Делать выводы по качеству восстановления")
+    print(" Анализировать кластеры (массовые vs сложные случаи)")
+    print(" Оценивать смещение от пропусков")
+    print(" Сравнивать методы заполнения")
+    print(" Делать выводы по качеству восстановления и структуре данных")
     print("="*60)
 
 
